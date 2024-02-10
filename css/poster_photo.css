@@ -1,0 +1,129 @@
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex1,
+.flex2 {
+    flex: 1;
+    margin-right: 10px; /* Ajout de marge entre les colonnes */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 7%;
+    font-size: x-large;
+    color: #333;
+    margin-bottom: 2%;
+}
+
+h2 {
+    color: #444;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    padding: 3%;
+    margin: 2%;
+    text-align: center;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+#drop-area p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.button {
+    background-color: #009DDC;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #007bb6;
+}
+
+#fileElem {
+    display: none;
+}
+
+#drop-area.dragover {
+    border-color: #007bb6;
+}
+
+/* Animation */
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+#drop-area.dragover .button {
+    animation: pulse 1.5s infinite;
+}
+
+input[type="text"],
+input[type="date"],
+select[multiple] {
+    width: calc(100% - 40px); /* Ajuster la largeur des éléments de formulaire */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #009DDC;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #007bb6;
+}

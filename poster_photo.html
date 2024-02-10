@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/poster_photo.css">
+
+    <meta name="author" content="Bastien Soleilhac">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav_bar">
+            <a class="hover_nav_element" href="index.html">Poster photo</a>
+            <a class="hover_nav_element" href="portrait.html">Exporter photo</a>
+            <a class="hover_nav_element" href="bilan.html">Paramètre</a>
+            <button class="hover_nav_element" type="button" onclick="deconecction()">Deconnection</button>
+        </div>
+    </header>
+
+    <section>
+        <h1>Ici vous pouvez importer une photo et saisir des informations sur une sortie, dans le but de créer un poste instagramme et facebook.</h1>
+
+        <div id="drop-area", draggable="true">
+            <form class="my-form">
+                <p>Glissez-déposez une photo ici ou cliquez pour sélectionner une photo</p>
+                <input type="file" id="fileElem" accept=".jpg, .jpeg, .png" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Sélectionnez une photo</label>
+    
+                <img id="preview" src="#" alt="Prévisualisation de l'image" style="max-width: 100%; max-height: 200px; margin-top: 20px; display: none;">
+            </form>
+        </div>
+    
+        <form class="my-form" onsubmit="handleSubmit(event)">
+            <div>
+                <h2>Renseignez le nombre de kilometre effectuer et le déniveler :</h2>
+                <p>Veuilliez respecter cette forme :  <strong>22km 800D+</strong></p>
+                <input type="text" id="text1" placeholder="Entrez le kilometrage et le déniveler" required>
+            </div>
+            <div>
+                <h2>Entrez la date de la sortie :</h2>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+                <h2>Selectionner le groupe qui a effectuer cette sortie VTT :</h2>
+                <select id="choices" name="choices[]" multiple required>
+                    <option value="option1">Groupe des jeunes</option>
+                    <option value="option2">Groupe intermédiaire</option>
+                    <option value="option3">Groupe des forts </option>
+                    <option value="option4">Groupe mixte </option>
+                </select>
+            </div>
+            <div>
+                <h2>Entrez un commentaire qui apparétera en dessous du poste :</h2>
+                <input type="text" id="text2" placeholder="Entrez le commentaire" required>
+            </div>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <script src="js/login.js"></script>
+    <script src="js/depo_fichier.js"></script>
+
+</body>
+</html>

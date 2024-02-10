@@ -1,0 +1,150 @@
+body {
+    background-color: black;
+    background-size: cover;
+    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.corps {
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.5); /* Ajout de la propriété box-shadow */
+}
+
+.login, .password-input-container, form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Ajout pour espacer les éléments */
+}
+
+.login label {
+    align-self: flex-start; /* Pour aligner l'étiquette à gauche */
+}
+
+
+h2 {
+    font-size: 2em; /* Augmentation de la taille de la police */
+    text-transform: uppercase; /* Transformation du texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+button {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Suppression de la bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 1em; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Animation au survol */
+    align-self: center;
+}
+
+button:hover {
+    background-color: #45a049; /* Changement de couleur au survol */
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #f2f2f2; /* Couleur de fond */
+    border: none; /* Suppression de la bordure */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Espacement en bas */
+    border-radius: 5px; /* Bordures arrondies */
+    font-size: 1em; /* Taille de la police */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none; /* Suppression de l'effet de focus */
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1); /* Ombre portée au focus */
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-container input[type="password"] {
+    flex: 1;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+   
+}
+
+.password-input-container button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.error-messages {
+    margin-bottom: 10px;
+    height: 40px; /* Hauteur fixe */
+    overflow: hidden; /* Pour cacher le dépassement de contenu */
+}
+
+.error-message {
+    color: red;
+    font-size: 1em;
+    text-align: center;
+}
+
+canvas { 
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+    background-color:black;
+    position: absolute; /* Changement */
+    top: 0; /* Changement */
+    left: 0; /* Changement */
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .corps {
+        width: 30%; /* Réduction supplémentaire de la largeur du corps */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .corps {
+        width: 65%; /* Réduction supplémentaire de la largeur du corps */
+    }
+}

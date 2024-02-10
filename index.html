@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <title>Login</title>
+</head>
+    <body>
+        <canvas id="test"></canvas>
+        <div class="corps">
+            <h2>Login</h2>
+            <form> 
+                <div class="login">
+                    <label for="login">Votre login :</label>
+                    <input type="text" id="login" name="login" required>
+                </div>
+                <div>
+                    <label for="motdepasse">Votre mot de passe :</label>
+                    <div class="password-input-container">
+                        <input type="password" id="motdepasse" name="motdepasse" required>
+                    </div>
+                </div>
+                <div id="errorMessages" class="error-messages">
+                    <div id="errorMessage1" class="error-message"></div>
+                    <div id="errorMessage2" class="error-message"></div>
+                </div>
+                <button type="button" onclick="validationLogin()">Connection</button>
+            </form>
+        </div>
+        <script src="js/login.js"></script>
+        <script src="js/curosAniamtion.js"></script>
+    </body>
+</html>
