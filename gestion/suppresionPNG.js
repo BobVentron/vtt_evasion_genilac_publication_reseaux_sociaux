@@ -1,14 +1,17 @@
 const fs = require('fs');
-function suprPNG(){
+const config = require('../config.json');
+const logger = require('./gestionLog');
+
+function suprPNG() {
     return new Promise((resolve) => {
-        fs.readdirSync('./media/images_final').forEach(fichier => {
-            const cheminFichier = `./media/images_final/${fichier}`;
+        fs.readdirSync(config.directory.fichierImageFinale).forEach(fichier => {
+            const cheminFichier = `${config.directory.fichierImageFinale}/${fichier}`;
         
             // Vérifier si le fichier a l'extension .png
             if (fichier.endsWith('temp.png')) {
                 // Supprimer le fichier
                 fs.unlinkSync(cheminFichier);
-                console.log(`Fichier ${fichier} supprimé avec succès.`);
+                logger.info(`Fichier ${fichier} supprimé avec succès.`);
                 resolve();
             }
         });
