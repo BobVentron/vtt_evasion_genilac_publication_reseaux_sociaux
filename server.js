@@ -6,6 +6,7 @@ const config = require('./config.json')
 const connection =require('./gestion/connectBDD')
 const logger = require('./gestion/gestionLog');
 const apiRoutes = require('./gestion/gestionApi');
+const client = require('./gestion/gestionBot');
 
 const app = express();
 
@@ -38,5 +39,7 @@ app.use((req, res, next) => {
 
 // Démarrer le serveur Express
 app.listen(config.port, () => {
-    logger.log('connect', `Server is running on port ${config.port}`);
+    logger.log('connect', `Server express is running on port ${config.port}`);
 });
+
+client.login(config.discord.token);
