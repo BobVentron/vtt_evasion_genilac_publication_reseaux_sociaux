@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/parametre.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav_bar">
+            <a class="hover_nav_element" href="index.html">Poster photo</a>
+            <a class="hover_nav_element" href="exporter_photo.html">Exporter photo</a>
+            <a class="hover_nav_element" href="parametre.html">Paramètre</a>
+            <button class="hover_nav_element" type="button" onclick="deconecction()">Deconnection</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Mode Sombre</h1>
+        <label class="switch">
+          <input type="checkbox" id="toggleButton">
+          <span class="slider"></span>
+        </label>
+        <p>Activer le mode sombre</p>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/parametre.js"></script>
+
+</body>
+</html>

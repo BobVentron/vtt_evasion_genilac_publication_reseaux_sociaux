@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond par défaut */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode {
+    background-color: #222; /* Couleur de fond pour le mode sombre */
+    color: #fff; /* Couleur du texte pour le mode sombre */
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    margin-top: 7%;
+}
+
+.custom-file-upload {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+#fileInput {
+    display: none;
+}
+
+.file-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.file-list div {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.image-preview {
+    margin-top: 20px;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 300px; /* Ajustez la hauteur maximale selon vos besoins */
+    margin-top: 10px;
+    border-radius: 5px;
+    object-fit: contain; /* Ajuste la taille de l'image tout en préservant ses proportions */
+}
+
+/* Styles pour le glisser-déposer */
+.drop-area-text {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.drop-area-text:hover {
+    border-color: #007bff;
+}
+
+.drop-area-text i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.drop-area-text p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.drag-over {
+    border-color: #007bff !important;
+}
+
+#dropArea {
+    position: relative;
+}
+
+#fileInput {
+    position: absolute;
+    left: -9999px;
+}

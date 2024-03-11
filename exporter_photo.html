@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/exporter_photo.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav_bar">
+            <a class="hover_nav_element" href="index.html">Poster photo</a>
+            <a class="hover_nav_element" href="exporter_photo.html">Exporter photo</a>
+            <a class="hover_nav_element" href="parametre.html">Paramètre</a>
+            <button class="hover_nav_element" type="button" onclick="deconecction()">Deconnection</button>
+        </div>
+    </header>
+
+    <div class="container" id="dropArea">
+        <div class="drop-area-text">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Faites glisser et déposez des fichiers ici</p>
+        </div>
+        <label for="fileInput" class="custom-file-upload">
+            <i class="fas fa-file-upload"></i> OU Sélectionnez des fichiers
+        </label>
+        <input type="file" id="fileInput" multiple>
+        <p id="message">Cliquez sur le bouton ci-dessus ou faites glisser et déposez des fichiers ici.</p>
+        <div id="imagePreview" class="image-preview"></div>
+        <div id="fileList" class="file-list"></div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/parametre.js"></script>
+    <script src="js/exporter_photo.js"></script>
+ 
+    
+</body>
+</html>

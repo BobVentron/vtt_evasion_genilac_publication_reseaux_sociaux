@@ -127,3 +127,67 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #007bb6;
 }
+
+body {
+    background-color: #f0f0f0; /* Couleur de fond par défaut */
+}
+  
+.dark-mode {
+    background-color: #222; /* Couleur de fond pour le mode sombre */
+    color: #fff; /* Couleur du texte pour le mode sombre */
+}
+
+/* Styles spécifiques au mode sombre */
+.dark-mode .container {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1 {
+    color: #fff;
+}
+
+.dark-mode h2 {
+    color: #ccc;
+}
+
+.dark-mode p {
+    color: #aaa;
+}
+
+.dark-mode #drop-area {
+    border: 2px dashed #777;
+    background-color: #333;
+}
+
+.dark-mode #drop-area p {
+    color: #999;
+}
+
+.dark-mode .button {
+    background-color: #007bb6;
+    color: #fff;
+}
+
+.dark-mode .button:hover {
+    background-color: #005a8b;
+}
+
+.dark-mode #drop-area.dragover {
+    border-color: #005a8b;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="date"],
+.dark-mode select[multiple] {
+    border-color: #555;
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="date"]:focus,
+.dark-mode select[multiple]:focus {
+    border-color: #007bb6;
+}
